@@ -52,16 +52,23 @@ table {
 body {
     font-family: 'Open Sans';
 }
+.home-body {
+    background-image: linear-gradient(to bottom, rgba(90, 90, 61, 0.5), rgba(93, 93, 128, 0.5)),
+    url("../media/banner.jpg");
+    background-size: 100% 500px;
+    background-repeat: no-repeat;
+}
 /*  Header Styles */
 
 .header {
     background-color: white;
     width: 80%;
-    margin: 20px auto;
-    position: fixed;
+    margin: 5px auto;
+    position: sticky;
+    text-transform: uppercase;
     left: 30px;
     right: 30px;
-    top: 30px;
+    top: 0;
 }
 .logo-anchor {
     text-decoration: none;
@@ -76,75 +83,74 @@ body {
     margin-right: 10px;
 }
 .nav-bar {
-    margin-right: 10px;
+    margin: 0 10px;
 }
-.nav-anchor {
+.nav-bar a {
     text-decoration: none;
     color: rgba(15, 14, 14, 0.808);
-    padding: 10px;
     font-weight: 400;
+    font-size: 14px;
+    margin: 0 10px;
 }
-.home {
-    color: rgba(219, 71, 26, 0.822);
+.active{
+    color: red;
 }
 
 /*  First Section Styles */
-
 .hero {
     width: 100%;
-    height: 500px;
-    top: 0;
-    background-image: linear-gradient(to bottom, rgba(90, 90, 61, 0.5), rgba(93, 93, 128, 0.5)),
-    url("../styles/assets/media/banner.jpg");
-    background-size: cover;
+    text-align: center;
+   
 }
 .hero-container {
-    padding-top: 200px;
     width: 26%;
-    margin: 0 auto;
-    text-align: center;
+    margin: 12% auto;
 }
 .hero-container h1 {
     font-size: 32px;
     font-weight: 600;
     color: white;
+    line-height: 1.5;
     border-bottom: 1px solid white;
     margin-bottom: 10px;
 }
-.hero-container h3 {
+.hero-container h2 {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 .hero-btn {
     background-color: red;
     color: white;
     border: 0;
     padding: 10px;
+    margin-top: 10px;
     font-weight: 600;
 }
 .nav-social {
-    padding-top: 20px;
-    margin-left: 550px;
+    margin: 2px auto;
+    padding: 20px;
+    text-align: center;
 }
 .nav-social a {
-   color: white;
-   font-size: 20px;
-   padding: 0 6px;
+   color: rgba(0, 0, 0, 0.534);
+   font-size: 14px;
+   padding: 10px;
+   background-color: white;
+   border-radius: 50%;
 }
-
-/*  --------  */
+/* ----------------------------------- */
 
 /* Second Section Styles */
 .pages-dots {
-   width: 6%;
-   margin: 5px auto;
-   padding-left: 8px;
+   width: 10%;
+   text-align: center;
+   display: inline-block;
 }
 .dots {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     margin: 3px;
     border-radius: 50%;
     display: inline-block;
@@ -159,17 +165,8 @@ body {
     background-color: rgba(51, 49, 49, 0.424);
 }
 
-/* Our Services Styles */
-.service-box {
-    width: 200px;
-    padding: 100px 0;
-}
-.service-box a {
-    color: white;
-    font-size: 30px;
-    display: block;
-    text-align: center;
-}
+/* Our Services Icon */
+
 .teal {
     background-color: teal;
 }
@@ -183,10 +180,18 @@ body {
     background-color: rgb(87, 145, 12);
 }
 
-/*  Our Portfolio/ Our Team  Images Columns */
+/*  Our Service Icons / Our Portfolio Images / Our Team Images */
 .col {
     width: 22%;
+    height: 200px;
     margin: 1.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col a {
+    color: white;
+    font-size: 30px;
 }
 .col img {
     width: 100%;
@@ -194,9 +199,11 @@ body {
 .wrap {
     flex-wrap: wrap;
 }
-.round-image {
+.team-image {
     border-radius: 50%;
 }
+
+/*  TEAM SECTION ARTICLE STYLES */
 .skill-bar {
     width: 30%;
 }
@@ -209,7 +216,7 @@ body {
 .text-orange {
     color: rgba(241, 144, 32, 0.911);
 }
-.red {
+.percentage-bar .red {
     background-color: rgb(231, 63, 21);
     padding: 5px;
 }
@@ -222,10 +229,13 @@ body {
 .eighty {
     width: 80%;
 }
-/* Contact Styles */
-.mapouter {
-    z-index: -1;
-    margin-bottom: 30px;
+/* OUR CONTACT STYLES*/
+#gmap_canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
 }
 .form {
     width: 40%;
@@ -259,7 +269,7 @@ textarea {
 /*  Footer Styles */
 
 .footer {
-    width: 857.66px ;
+    width: 80%;
     margin: 0 auto;
     padding-bottom: 20px;
     font-size: 12px;
@@ -271,9 +281,8 @@ textarea {
     text-decoration: none;
 }
 
-/* ------------------------------------ */
 
-/*  Common Styles */
+/*  GENERAL STYLES */
 
 .flex {
     display: flex;
@@ -282,53 +291,53 @@ textarea {
 }
 
 .wrapper {
-    max-width: 90%;
+    max-width: 80%;
     margin: 100px auto;
 }
-.wrapper-heading {
+.wrapper-header {
     text-align: center;
+    margin-bottom: 40px;
+}
+.wrapper-header h3 {
     color: rgba(0, 0, 0, 0.767);
     text-decoration: underline;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 15px;
 }
-.wrapper-sub-heading {
-    text-align: center;
+.wrapper-header h4 {
     color: rgba(0, 0, 0, 0.548);
     font-size: 14px;
-    margin-bottom: 30px;
 }
 .flex-wrapper {
-    width: 80%;
-    margin: 40px auto;
+    width: 100%;
+    margin: 30px auto;
  }
- .content-heading {
+ .article-heading {
     font-size: 20px;
     text-align: center;
     margin-bottom: 6px;
+    text-transform: uppercase;
     color: rgba(0, 0, 0, 0.781);
 }
-.content-sub-heading {
+.article-sub-heading {
     font-size: 15px;
     text-align: center;
     margin-bottom: 40px;
     color: rgba(0, 0, 0, 0.39);
 }
-.content {
+.article{
     width: 70%;
     margin-right: 10px;
     line-height: 1.5;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.733);
 }
-.content-container {
+.article-container {
     align-items: flex-start;
 }
 
-
-
-/* ------------------------------------------ */
+/* **************************************************************** */
 
 /*  GALLERY PAGE STYLES */
 
@@ -336,13 +345,15 @@ textarea {
     background-color: tomato;
     width: 25%;
     margin: 0;
-    padding: 10px;
-    position: sticky;
+    padding: 8px;
+    position: fixed;
     top: 0;
+    bottom: 0;
 }
 .sidebar-container {
     width: 90%;
-    margin: 0 auto;
+    margin: 10px auto;
+    line-height: 1;
     background-color: tomato;
 }
 .sidebar-container a {
@@ -365,7 +376,7 @@ textarea {
     align-content: space-between;
 }       
 .sidebar-content {
-    margin-top: 290px;
+    margin-top: 90%;
     padding: 10px;
 }
 .sidebar-content h1 {
@@ -373,24 +384,33 @@ textarea {
     font-size: 26px;
     margin-bottom: 10px;
 }
+.sidebar-content h2{
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
 .sidebar-social {
     margin-top: 20px;
 }
 .sidebar-social a {
-    margin-right: 30px;
     font-size: 20px;
+    color: rgba(0, 0, 0, 0.534);
+    font-size: 20px;
+    padding: 5px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
 }
+/*  GALLERY PAGE MAIN SECTION STYLES */
 .gallery-main {
     text-align: center;
     color: black;
     width: 70%;
-    left: 30px;
-    margin: 1.5%;
+    margin-left: 28%;
 }
 .gallery-main h1 {
    font-size: 28px;
    font-weight: 800;
-   margin-bottom: 10px;
+   margin: 20px auto;
 }
 .gallery-page {
     align-items: flex-start;
@@ -410,3 +430,4 @@ textarea {
     margin-bottom: 10px;
     border: 2px solid black;
 }
+/* ******************************************** */
