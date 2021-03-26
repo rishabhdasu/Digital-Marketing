@@ -237,6 +237,9 @@ body {
     left: 0;
     top: 0;
 }
+.mapouter {
+    z-index: -1;
+}
 .form {
     width: 40%;
 }
